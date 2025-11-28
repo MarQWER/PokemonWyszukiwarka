@@ -155,3 +155,24 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+
+@media(max-width: 800px) {
+  #pokeContainer {
+    width: 350px;
+    height: 600px;
+  }
+
+  #pokemonSprite {
+    width: 150px;
+    height: 150px;
+  }
+
+  #types img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .stats {
+    width: 350px;
+  }
+}
