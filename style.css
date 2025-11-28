@@ -1,0 +1,157 @@
+@font-face {
+  font-family: ArialRounded;
+  /* set name */
+  src: url(arialroundedmtbold.ttf);
+  /* url of the font */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1d1f21;
+  color: #f8f8f8;
+  font-family: "ArialRounded";
+}
+
+#con {
+  padding: 10px;
+  text-align: center;
+}
+
+#inputs {
+  margin-top: 50px;
+}
+
+#inputs #pokeSearch {
+  height: 30px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+}
+
+#inputs button {
+  cursor: pointer;
+  margin-top: 10px;
+  height: 40px;
+  width: 150px;
+  border: #f8f8f8 1px solid;
+  border-radius: 10px;
+  font-size: 1.1em;
+}
+
+#pokeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid;
+  border-color: white;
+  border-radius: 20px;
+  width: 500px;
+  height: 750px;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 10px;
+}
+
+#pokemonSprite {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+#types {
+  display: flex
+}
+
+#types img {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  margin-bottom: 20px;
+}
+
+/* kontener statystyk */
+.stats {
+  width: 500px;
+  /* lub dopasuj */
+  margin: 0 auto;
+}
+
+/* wiersz statystyk: nazwa | wartość | pasek */
+.stats-row {
+  display: grid;
+  grid-template-columns: 130px 1fr 50px;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+/* etykiety i liczby */
+.stat-name {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.stat-value {
+  font-weight: 600;
+  text-align: right;
+}
+
+/* kontener paska - musi mieć width:100% żeby procenty działały poprawnie */
+.stat-bar {
+  width: 100%;
+  /* ważne: zajmuje całą kolumnę */
+  min-width: 40px;
+  /* zapewnia widoczność na małych ekranach */
+  background: #e5e5e5;
+  height: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  /* ułatwia przewidywanie wymiarów */
+  display: block;
+  /* upewniamy się, że to blok */
+}
+
+/* wewnętrzny pasek - szerokość ustawiana inline style (np. style="width: 24%") */
+.stat-bar-inner {
+  display: block;
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.25s ease;
+  width: 0;
+  /* startowa wartość */
+  box-sizing: border-box;
+}
+
+/* kolory */
+.stat-bar-inner.low {
+  background: #ffcc33;
+}
+
+.stat-bar-inner.mid {
+  background: #8cd547;
+}
+
+.stat-bar-inner.high {
+  background: #2ecc71;
+}
+
+/* opcjonalnie: obramowanie, żeby lepiej widzieć kontener */
+.stat-bar {
+  outline: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#info {
+  display: flex;
+  width: 100%;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: space-around;
+}

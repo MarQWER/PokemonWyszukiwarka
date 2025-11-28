@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokemony</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="con">
+    <header>
+      <h1>Pokemon Wyszukiwarka</h1>
+      <p>Testowy Projekt od: Kfer</p>
+      <div id="inputs">
+        <input type="text" placeholder="Wpisz Pokemona" id="pokeSearch" />
+        <br />
+        <button id="search">Wyszukaj</button>
+      </div>
+    </header>
+    <main>
+      <div id="pokeContainer">
+        <div id="pokesprite">
+          <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none" />
+        </div>
+        <h1 id="pokename" style="text-shadow: none;"></h1>
+        <div id="types">
+          <img src="" alt="typ 1" id="type1" style="display: none">
+          <img src="" alt="typ 2" id="type2" style="display: none">
+        </div>
+        <div id="stats-container" class="stats">
+        </div>
+
+        <div id="info" style="display: none;">
+          <div id="genderratio">
+            <h3>Gender Ratio</h3>
+            <table width="100%">
+              <tbody>
+                <tr>
+                  <td style="display: none" id="nogender">
+                    <span>Unknown</span>
+                  </td>
+                  <td style="display: block">
+                    <div class="genderbar" id="male"
+                      style="float:left; background: #3355FF; border-top-left-radius: 20px; border-bottom-left-radius: 20px; height: 10px; width: 48.5%; border: 0.5px solid black; overflow: hidden; border-right-width: 0;">
+                    </div>
+                    <div class="genderbar" id="female"
+                      style="float:left; background: #ff77dd; border-top-right-radius: 20px; border-bottom-right-radius: 20px; height: 10px; width: 48.5%; border: 0.5px solid black; overflow: hidden; border-left-width: 0;">
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="egg">
+            <h3>Egg Groups</h3>
+            <p id="egg_group1">Unknown</p>
+            <p id="egg_group2"></p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
