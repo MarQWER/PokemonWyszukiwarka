@@ -68,9 +68,9 @@ async function FetchData() {
     const data = await response.json();
 
     //Fetch Species
-    const pokeId = data.id;
+    const speciesName = pokeName.split("-")[0];
     const responseSpecies = await fetch(
-      `https://pokeapi.co/api/v2/pokemon-species/${pokeId}/`
+      `https://pokeapi.co/api/v2/pokemon-species/${speciesName}/`
     );
 
     if (!responseSpecies.ok) {
@@ -120,6 +120,7 @@ async function FetchData() {
 
 
     //statystyki giga skomplikowane sam tego nie cumam
+    //Uwaga VIBECODE!!!
     showStats(data)
     function showStats(data) {
       const container = document.getElementById("stats-container");
