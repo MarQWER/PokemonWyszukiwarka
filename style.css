@@ -22,7 +22,7 @@ body {
 }
 
 #inputs {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 #inputs #pokeSearch {
@@ -156,10 +156,10 @@ body {
   justify-content: space-around;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 700px) {
   #pokeContainer {
     width: 350px;
-    height: 600px;
+    height: 550px;
   }
 
   #pokemonSprite {
@@ -168,11 +168,16 @@ body {
   }
 
   #types img {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
   }
 
   .stats {
     width: 350px;
   }
+
+  #info {
+    margin-top: 10px;
+  }
+
 }
